@@ -72,6 +72,8 @@ To run batch jobs, run the python script `main_results.py` from outside the cont
 
 `python3 main_results.py p1 --slurm`
 
+Note: you must configure the slurm script generator settings with your email, time required etc.
+
 To run all the examples at once:
 `python3 main_results.py all --slurm`
 
