@@ -32,7 +32,7 @@ def format_slurm_file(command, path):
               'cd \n',
               # current issue with dolfin adjoint docker container on singularity 
               'export SINGULARITYENV_LD_LIBRARY_PATH=/.singularity.d/libs:/usr/local/lib \n',
-              'cd fenicsmembranes/CMAME/examples/ \n',
+              'cd FenicsMembranesCMAME/CMAME/examples/ \n',
               f'singularity exec {path_to_sif}pyadjoint_2019.1.0.sif {command}']
     return header
 
