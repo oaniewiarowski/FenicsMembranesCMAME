@@ -72,6 +72,9 @@ To run batch jobs, run the python script `main_results.py` from outside the cont
 
 `python3 main_results.py p1 --slurm`
 
+To run all the examples at once:
+`python3 main_results.py all --slurm`
+
 ## Details
 
 The problem data from the paper are configured in the convenience script: `main_results.py`.
@@ -112,4 +115,8 @@ To experiment with the code, you can also pass other args to the individual prob
 `python3 problem1.py [<options>]`
 
 See each problem for details.
+
+## Note on runtimes
+As currently configured, problem P1 (pressure optimization) and problem 3A (plane strain thickness optimization) each take ~<10 min to run. Each shape optimization (P2 A and B) take about 30 min each. 3D thickness optimization takes about an hour (as it is the largest problem). You can reduce the mesh resolution in the `main_results.py` to reduce the runtimes, but results may vary/are not guaranteed. You can inspect the stdout (redirected to file specified in path) to monitor the progress. 
+
 
