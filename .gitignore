@@ -1,0 +1,15 @@
+*~
+*__pycache__*
+
+*.pyc
+.DS_Store
+.log
+.spyproject
+
+*.xdmf
+*.h5
+*.pvd
+*.vtu
+
+
+jitfailure*
