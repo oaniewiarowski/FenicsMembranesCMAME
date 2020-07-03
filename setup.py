@@ -10,7 +10,7 @@ setup(
     scripts=[],
     license='LICENSE.txt',
     description='TBD',
-    long_description=open('README.txt').read(),
+    long_description=open('README.md').read(),
     install_requires=[
     ],
 )#
