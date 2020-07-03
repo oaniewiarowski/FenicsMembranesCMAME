@@ -69,16 +69,16 @@ To run batch jobs:
 
 The problem data from the paper are configured in the convenience script: `main_results.py`.
 
-If running on a cluster, this script will automatically create and submit slurm scripts. If so,
-the `path_to_sif` variable in 'main_results.py' may need to be edited to provide the correct path to the `.sif` file
- 
-If running on a personal machine, stdout is redirected to the output file specified by the `--path` variable
-
 The script is called from the command line with a command corresponding to the problem ie
 ` python3 main_results.py p1`
 
 The above command will recreate the results for the plane strain 
 pressure minimization problem (Problem 1). 
+
+If running on a cluster, this script will automatically create and submit slurm scripts. If so,
+the `path_to_sif` variable in 'main_results.py' may need to be edited to provide the correct path to the `.sif` file
+ 
+If running on a personal machine, stdout is redirected to the output file specified by the `--path` variable
 
 Once the optimization terminates, the results can be plotted:
 ` python3 main_results.py p1 --plot`
