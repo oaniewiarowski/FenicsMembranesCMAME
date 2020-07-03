@@ -81,15 +81,18 @@ the `path_to_sif` variable in 'main_results.py' may need to be edited to provide
 If running on a personal machine, stdout is redirected to the output file specified by the `--path` variable
 
 Once the optimization terminates, the results can be plotted:
+
 ` python3 main_results.py p1 --plot`
 
 Problems 1 and 2A have the option to also calculate and save the gradient for the chosen control bounds.
+
 ` python3 main_results.py p1a --deriv`
 
 To run the Taylor tests:
 ` python3 main_results.py p1 --tt`
 
-To disable optimization (if you only want to run the taylor test and/or gradient study)
+To disable optimization (if you only want to run the taylor test and/or gradient study):
+
 ` python3 main_results.py p1 --tt --deriv --no-optimize `
 ` python3 main_results.py p1 --tt --no-optimize `
 
