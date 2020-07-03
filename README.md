@@ -11,7 +11,7 @@ See http://www.dolfin-adjoint.org/en/latest/download/index.html for detailed ins
 and also 
 https://fenics.readthedocs.io/projects/containers/en/latest/introduction.html
 
-To generate the graphs, you will need to have installed matplotlib and pandas 
+To generate the plots, you will need to have installed matplotlib and pandas 
 
 Some visualizations were made externally using Paraview 
 www.paraview.org
