@@ -230,7 +230,18 @@ def p3a(args):
         method = 'lsq'
         path = f'ThickOpt/plane_strain/{lmax}/{diag}/{method}/res{resx}x{resy}/itr{itr}/'
         print("Plotting problem 3a")
-        os.system(f'python3 plotting/thick_opt_plotting.py --path {path} --method {method}')
+        if os.path.isfile(path+'initial.csv'):
+                        os.system(f'python3 plotting/thick_opt_plotting.py --path {path} --method {method}')
+        else:
+            print('***'*50)
+            print("To plot stretches, need to process data in paraview first!")
+            print("Load the initial and final xdmf files, select last time step...")
+            print("Select 'Plot over line' and then File > Save Data to csv.")
+            print("save the initial state data as:")
+            print(f"\t '{path}initial.csv'")
+            print("save the final state data as:")
+            print(f"\t '{path}final.csv'")
+            print('***'*50)
         return
 
     if OPTIMIZE:
