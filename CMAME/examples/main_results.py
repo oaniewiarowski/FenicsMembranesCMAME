@@ -239,14 +239,14 @@ def p3a(args):
             if not os.path.exists(path):
                 os.system(f'mkdir -p {path}')
 
-            command = f'''python3 p3a.py \
-                      --path {path} \
-                      --itr {itr} \
-                      --resx {resx} \
-                      --resy {resy} \
-                      --lmax {lmax} \
-                      --diag {diag} \
-                      --method {method} '''
+            command = 'python3 p3a.py ' +\
+                      f'--path {path} ' +\
+                      f'--itr {itr} ' +\
+                      f'--resx {resx} ' +\
+                      f'--resy {resy} ' +\
+                      f'--lmax {lmax} ' +\
+                      f'--diag {diag} ' +\
+                      f'--method {method} '
             if not args.opt:
                 command += '--no-optimize '
             if args.tt:
@@ -282,17 +282,17 @@ def p3b(args):
         if not os.path.exists(path):
             os.system(f'mkdir -p {path}')
 
-        command = f'''python3 p3b.py \
-                  --resx {res[0]} \
-                  --resy {res[1]} \
-                  --lmax {lmax} \
-                  --bcs {bcs} \
-                  --diag {diag} \
-                  --method {method} \
-                  --itr {itr} \
-                  --tdeg {tdeg} \
-                  --element {element} \
-                  --path {path} '''
+        command = 'python3 p3b.py ' +\
+                  f'--resx {res[0]} ' +\
+                  f'--resy {res[1]} ' +\
+                  f'--lmax {lmax} ' +\
+                  f'--bcs {bcs} ' +\
+                  f'--diag {diag} ' +\
+                  f'--method {method} ' +\
+                  f'--itr {itr} ' +\
+                  f'--tdeg {tdeg} ' +\
+                  f'--element {element} ' +\
+                  f'--path {path} '
         if not args.opt:
             command += '--no-optimize '
         if args.tt:
