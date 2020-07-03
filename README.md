@@ -45,7 +45,7 @@ The examples are in the following directory:
 
 `cd CMAME/examples`
 
-Run a problem:
+Run a problem. The following command runs problem 1, the pressure minimization problem:
 
 `python3 main_results.py p1`
 
@@ -101,7 +101,7 @@ Once the optimization terminates, the results can be plotted:
 
 Problems 1 and 2A have the option to also calculate and save the gradient for the chosen control bounds.
 
-` python3 main_results.py p1a --deriv`
+` python3 main_results.py p1 --deriv`
 
 To run the Taylor tests:
 ` python3 main_results.py p1 --tt`
