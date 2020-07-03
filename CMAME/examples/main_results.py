@@ -11,14 +11,14 @@ import argparse
 
 
 OPTIMIZE = True
-path_to_sif = '../../../'
+path_to_sif = '../../../'  # make sure this is the right path to singularity .sif file (assuming in home dir)
 
 def format_slurm_file(command, path):
     ''' for running slurm jobs from singularity containers '''
     N = 1  # nodes
-    num_cpu = 4
-    time = '08:01:00'
-    email = 'aan2@princeton.edu'
+    num_cpu = 4  # number of proc
+    time = '04:01:00'  # enter max time
+    email = ''  # enter your email here
 
     header = ['#!/bin/bash \n',
              f'#SBATCH -N {N}  # number of nodes \n',
