@@ -10,6 +10,8 @@
 *.h5
 *.pvd
 *.vtu
-
+*.txt
+*.json
 
 jitfailure*
+*fenicsmembranes.egg-info*
