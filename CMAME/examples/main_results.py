@@ -123,7 +123,7 @@ def p1(args):
                     os.system(f'sbatch p1a_{p}.sh')
                 else:
                     os.system(f'touch {path}p1a.txt')
-                    command += f'> {path}p1a.txt'  # redirect stdout
+                    command += f' > {path}p1a.txt'  # redirect stdout
                     os.system(command)
 
 
@@ -175,7 +175,7 @@ def p2a(args):
                 os.system(f'sbatch p2a_{p}.sh')
             else:
                 os.system(f'touch {path}p2a.txt')
-                command += '> {path}p2a.txt'  # redirect stdout
+                command += f'> {path}p2a.txt'  # redirect stdout
                 os.system(command)
 
 
@@ -215,7 +215,7 @@ def p2b(args):
             os.system(f'sbatch p2b_{p}.sh')
         else:
             os.system(f'touch {path}p2b.txt')
-            command += '> {path}p2b.txt'  # redirect stdout
+            command += f' > {path}p2b.txt'  # redirect stdout
             os.system(command)
 
 
@@ -260,7 +260,7 @@ def p3a(args):
                 os.system(f'sbatch p3a_{method}.sh')
             else:
                 os.system(f'touch {path}p3a.txt')
-                command += '> {path}p3a.txt'  # redirect stdout
+                command += f'> {path}p3a.txt'  # redirect stdout
                 os.system(command)
 
 
@@ -305,7 +305,7 @@ def p3b(args):
             os.system(f'sbatch 3b{method}.sh')
         else:
             os.system(f'touch {path}p3b.txt')
-            command += '> {path}p3b.txt'  # redirect stdout
+            command += f' > {path}p3b.txt'  # redirect stdout
             os.system(command)
 
 
