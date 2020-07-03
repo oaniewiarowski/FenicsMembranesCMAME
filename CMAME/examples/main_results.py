@@ -231,7 +231,7 @@ def p3a(args):
         path = f'ThickOpt/plane_strain/{lmax}/{diag}/{method}/res{resx}x{resy}/itr{itr}/'
         print("Plotting problem 3a")
         if os.path.isfile(path+'initial.csv'):
-                        os.system(f'python3 plotting/thick_opt_plotting.py --path {path} --method {method}')
+            os.system(f'python3 plotting/thick_opt_plotting.py --path {path} --method {method}')
         else:
             print('***'*50)
             print("To plot stretches, need to process data in paraview first!")
@@ -285,10 +285,23 @@ def p3b(args):
     element = 'DG'  # for thickness field
     method = 'lsq'
     path = f'ThickOpt/plane_stress/{bcs}/lmax{lmax}/res{res[0]}x{res[1]}/{diag}/{method}/{element}{tdeg}_itr{itr}/'
+    
     if args.plot:
         print("Plotting problem 3b")
-        os.system(f'python3 plotting/3d_thick_opt_plotting.py --method {method} --path {path}')
+        if os.path.isfile(path+'initial.csv'): 
+            os.system(f'python3 plotting/3d_thick_opt_plotting.py --method {method} --path {path}')
+        else:
+            print('***'*50)
+            print("To plot stretches, need to process data in paraview first!")
+            print("Load the initial and final xdmf files, select last time step...")
+            print("Select 'Plot over line' and then File > Save Data to csv.")
+            print("save the initial state data as:")
+            print(f"\t '{path}initial.csv'")
+            print("save the final state data as:")
+            print(f"\t '{path}final.csv'")
+            print('***'*50)
         return
+    
     if OPTIMIZE:
         if not os.path.exists(path):
             os.system(f'mkdir -p {path}')
