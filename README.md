@@ -21,6 +21,7 @@ www.paraview.org
 You will need Docker installed on your machine to continue.
 
 First, clone the repo:
+`git clone https://github.com/oaniewiarowski/FenicsMembranesCMAME.git`
 
 `cd FenicsMembranesCMAME`
 
