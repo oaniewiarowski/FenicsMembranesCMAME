@@ -25,7 +25,6 @@ l20 = r'$\lambda_2$ initial'
 l21 = r'$\lambda_2$ final'
 if __name__ == "__main__":
     
-#    fname = f'P2_thick_opt/{method}/{method}_res{RES}_itr{MAX_ITER}_rev1'
     fname = './PressureOpt/Pinned/'
     
     # Plot inital v optimized stretches....
